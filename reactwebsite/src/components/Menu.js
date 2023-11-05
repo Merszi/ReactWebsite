@@ -26,6 +26,6 @@ export const Menu = [
     {
         title : "Sign Up",
         url : "/signup",
-        icon : "nav-links-mobile"
+        cName : "nav-links-mobile"
     },
 ]
