@@ -1,3 +1,3 @@
 # ReactWebsite
 
-Dog hotel and dogschool website. 
+DOG HOTEL & TRAINING CENTER website in react js 
