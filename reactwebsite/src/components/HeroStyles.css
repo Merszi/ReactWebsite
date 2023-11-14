@@ -12,7 +12,7 @@ img {
 
 .hero-text {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 25%;
     transform: translate(-50%, -50%);
     width: 40%;
@@ -21,9 +21,7 @@ img {
 
 .hero-text h1 {
     font-size: 3rem;
-    background: #222;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color:black;
 }
 
 .hero-text p {
@@ -34,7 +32,7 @@ img {
 
 .hero-text .show {
     text-decoration: none;
-    background: #222;
+    background: #01959a;
     padding: 1rem 2rem;
     border-radius: 6px;
     font-size: 1.1rem;
@@ -46,7 +44,7 @@ img {
 
 @media screen and (max-width: 900px) {
     .hero-text {
-        top: 70%;
+        top: 55%;
         left: 30%;
         width: 60%;
     }
