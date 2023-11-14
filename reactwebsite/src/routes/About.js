@@ -1,12 +1,18 @@
 import Navbar from "../components/Navbar";
-
+import Hero from "../components/Hero";
+import AboutImg from "../images/img2.avif";
 
 function About() {
     return(
         <>
-         <Navbar />
-         <h1>about3belshsksk.</h1>
-        </> 
+        <Navbar />
+        <Hero 
+            cName="hero-mid"
+            heroImg={AboutImg}
+            title="About"
+            btnClass="hide"
+            />
+       </> 
      )
 }
 

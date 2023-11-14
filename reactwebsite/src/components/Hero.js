@@ -3,7 +3,7 @@ import "./HeroStyles.css";
 function Hero(props) {
     return(
        <div className={props.cName}>
-        <img alt="HeroImg" src= {require('../images/dogbackg2.jpg')} />
+        <img alt="HeroImg" src= {props.heroImg} />
     
         <div className="hero-text">
             <h1>{props.title}</h1>

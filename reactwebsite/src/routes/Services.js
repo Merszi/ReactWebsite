@@ -1,11 +1,18 @@
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import ServicesImg from "../images/img4.avif";
 
 function Services() {
     return(
         <>
-         <Navbar />
-         <h1>serviceslkfgélerjg</h1>
-        </> 
+        <Navbar />
+        <Hero 
+            cName="hero-mid"
+            heroImg={ServicesImg}
+            title="Services"
+            btnClass="hide"
+            />
+       </> 
      )
 }
 
