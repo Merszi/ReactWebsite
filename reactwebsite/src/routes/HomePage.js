@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import HomeDetails from "../components/HomeDetails";
 
 function Home() {
     return(
@@ -14,6 +15,7 @@ function Home() {
             button="/about"
             btnClass="show"
             />
+        <HomeDetails />
        </> 
     )
 }

@@ -1,11 +1,18 @@
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import contactImg from "../images/imggol.avif";
 
 function Contact() {
     return(
         <>
-         <Navbar />
-         <h1>contact pageeee</h1>
-        </> 
+        <Navbar />
+        <Hero 
+            cName="hero-mid"
+            heroImg={contactImg}
+            title="Contact"
+            btnClass="hide"
+            />
+       </> 
      )
 }
 
