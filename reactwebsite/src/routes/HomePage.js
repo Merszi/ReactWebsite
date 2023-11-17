@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import HomeDetails from "../components/HomeDetails";
+import Footer from '../components/Footer';
 
 function Home() {
     return(
@@ -16,6 +17,7 @@ function Home() {
             btnClass="show"
             />
         <HomeDetails />
+        <Footer />
        </> 
     )
 }

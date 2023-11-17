@@ -21,19 +21,8 @@ const HomeDetails = () => {
                     <img alt="img" src= {Firstpic2} />
                 </div>
             </div>
-
             <HomeData />
             <HomeData2 />
-
-            <div className="footer">
-                <p>Paws & Play Canine Hub
-                    1234 Dogwood Lane
-                    Cityville, CA 12345
-                    Phone: (555) 555-5555
-                    Email: info@pawsandplayhub.com</p>
-                <p>Follow Us: Facebook | Instagram | Twitter</p>
-                <h2>© 2023 Paws & Play Canine Hub. All rights reserved.</h2>
-            </div>
         </div>
     )
 }
