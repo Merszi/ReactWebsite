@@ -1,0 +1,97 @@
+  .section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .intro-section {
+    /*background-image: url('/dogpaw.jpg');*/
+    background-size: cover;
+    color: gray;
+    font-weight: 500;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+
+  .effectText {
+    padding-bottom: 3rem;
+    margin-top: 100px;
+    font-weight: 900;
+    font-size: 1.5rem; 
+    line-height: 1.2; 
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @supports (-moz-appearance:none) {
+    .effectText {
+      font-size: 1.5rem !important; 
+    }
+  }
+  
+  .effectText h1,
+  .effectText p {
+    font-size: 1.5rem !important;
+  }
+/* Service Cards */
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 300px;
+  }
+  
+  .service-card i {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #01959a; 
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .service-card p {
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .service-cards {
+      flex-direction: column;
+    }
+  
+    .service-card {
+      max-width: 100%;
+      margin: 10px 0;
+    }
+
+    .effectText {
+      max-width: 600px; 
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  

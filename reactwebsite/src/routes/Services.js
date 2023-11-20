@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import ServicesImg from "../images/img4.avif";
 import Footer from "../components/Footer";
+import ServicePage from "../components/OurService";
 
 function Services() {
     return(
@@ -13,6 +14,7 @@ function Services() {
             title="Services"
             btnClass="hide"
             />
+        <ServicePage />
         <Footer />
        </> 
      )
