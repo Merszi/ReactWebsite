@@ -12,7 +12,7 @@ const TypeWriter = ({text}) => {
         const timeoutId = setTimeout(() => {
             setCurrentText((value) => value + text.charAt(index.current));
             index.current += 1;
-        }, 100);
+        }, 70);
         return () => {
             clearTimeout(timeoutId);
         }
