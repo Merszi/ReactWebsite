@@ -1,0 +1,29 @@
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-top: 120px;
+  }
+  
+  .form-container input,
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .form-container button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form-container button:hover {
+    background-color: #45a049;
+  }
+  
+  
