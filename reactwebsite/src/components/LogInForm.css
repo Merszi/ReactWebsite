@@ -1,0 +1,18 @@
+.auth-form {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  
+  .auth-form input[type="text"],
+  .auth-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .auth-form button {
+    width: 100%;
+    padding: 10px;
+  }

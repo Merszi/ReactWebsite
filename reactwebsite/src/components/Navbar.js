@@ -1,37 +1,42 @@
-import { Component } from "react";
+// Navbar.js
+import React from "react";
 import "./Navbar.css";
 import { Menu } from "./Menu";
 import { Link } from "react-router-dom";
+import { useAuth } from './AuthContext';
 
-class Navbar extends Component {
-    state = {clicked: false};
-    handleClick = () => {
-        this.setState({clicked: !this.state.clicked})
-    }
-    render() {
-        return(
-            <nav className="NavbarItems">
-                <h1 className="navbar-logo">Paws & Play</h1>
+const Navbar = () => {
+  const { isAuthenticated, logout } = useAuth();
 
-                <div className="menu-icons" onClick= {this.handleClick}>
-                    <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
-                </div>
-
-                <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-                    {Menu.map((item, index) => {
-                       return(
-                        <li key={index}>
-                            <Link className= {item.cName} to={item.url}>
-                            <i className={item.icon}></i>{item.title}
-                            </Link>
-                        </li>
-                       ) 
-                    })}
-                    <button>Sign up</button>
-                </ul>
-            </nav>
-        )
-    }
-}
+  return (
+    <nav className="NavbarItems">
+      <h1 className="navbar-logo">Paws & Play</h1>
+      <div className="menu-icons">
+        <i className="fas fa-bars"></i>
+      </div>
+      <ul className="nav-menu">
+        {Menu.map((item, index) => (
+          <li key={index}>
+            <Link className={item.cName} to={item.url}>
+              <i className={item.icon}></i>{item.title}
+            </Link>
+          </li>
+        ))}
+        {isAuthenticated() ? (
+          <button onClick={logout}>Logout</button>
+        ) : (
+          <>
+            <Link to="/login">
+              <button>Login</button>
+            </Link>
+            <Link to="/signup">
+              <button>Sign Up</button>
+            </Link>
+          </>
+        )}
+      </ul>
+    </nav>
+  );
+};
 
 export default Navbar;

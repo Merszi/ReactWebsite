@@ -1,23 +1,44 @@
+/* ContactForm.css */
+
 .form-container {
-    max-width: 400px;
+    display: flex;
+    max-width: 800px;
     margin: 0 auto;
     background-size: cover;
     background-position: center;
     padding: 20px;
-    margin-top: 120px;
+    margin-top: 80px;
   }
   
-  .form-container input,
-  .form-container textarea {
+  .form-content {
+    flex: 1;
+  }
+  
+  .form-header {
+    font-size: 3.5rem; 
+  }
+  
+  .form-subheader {
+    font-size: 1.1rem; 
+    margin-top: 10px;
+  }
+  
+  .form-input,
+  .form-textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  .form-textarea {
+    resize: vertical;
   }
   
   .form-container button {
     background-color: #4caf50;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 25px;
     border: none;
     cursor: pointer;
   }
@@ -25,5 +46,4 @@
   .form-container button:hover {
     background-color: #45a049;
   }
-  
   

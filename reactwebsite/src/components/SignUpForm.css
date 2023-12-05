@@ -1,0 +1,21 @@
+
+.signup-form {
+    width: 500px; 
+    margin: 0 auto; 
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  
+  .signup-form input[type="text"],
+  .signup-form input[type="email"],
+  .signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .signup-form button {
+    width: 100%;
+    padding: 10px;
+  }
+  
