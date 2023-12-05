@@ -62,7 +62,7 @@ const SignUpForm = () => {
 
     if (validateForm()) {
       try {
-        const response = await axios.post('http://localhost:3001/signup', formData);
+        const response = await axios.post('http://localhost:5000/signup', formData);
 
         if (response.data.success) {
           console.log('User signed up successfully');

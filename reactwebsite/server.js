@@ -3,7 +3,7 @@ const cors = require('cors');
 const mysql = require('mysql');
 
 const app = express();
-const port = 3001;
+const PORT = process.env.PORT || 5000;
 
 // Specify the allowed origin (replace this with your frontend URL)
 const allowedOrigin = 'http://localhost:3000';
@@ -13,6 +13,7 @@ app.use(
   cors({
     origin: allowedOrigin,
     methods: 'POST', // Specify the allowed HTTP methods
+    credentials: true,
   })
 );
 app.use(express.json());
@@ -67,7 +68,7 @@ app.post('/login', (req, res) => {
     }
   });
 });
-app.post('/api/contact', (req, res) => {
+app.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
@@ -80,14 +81,23 @@ app.post('/api/contact', (req, res) => {
     message,
   };
 
-  contactData.push(newContact);
 
   console.log('Contact form submitted:', newContact);
+  console.log('Contact form submitted:', newContact);
 
-  // Send a response
-  res.json({ message: 'Form submitted successfully!' });
+  const query = 'INSERT INTO contact (name, email, message) VALUES (?, ?, ?)';
+  db.query(query, [name, email, message], (err, results) => {
+    if (err) {
+      console.error('Error saving contact form data:', err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    } else {
+      console.log('Contact form data saved to the database:', results);
+      // Send a response
+      res.json({ message: 'Form submitted successfully!' });
+    }
+  });
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

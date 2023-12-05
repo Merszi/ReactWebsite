@@ -1,8 +1,11 @@
 import "./LogInForm.css";
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const LogInForm = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -46,10 +49,12 @@ const LogInForm = () => {
 
     if (validateForm()) {
       try {
-        const response = await axios.post('http://localhost:3001/login', formData);
+        const response = await axios.post('http://localhost:5000/login', formData);
 
         if (response.data.success) {
           console.log('User logged in successfully');
+          // Redirect to the home page after successful login
+          navigate('/');
         } else {
           console.error('Failed to log in Server response:', response.data);
         }
@@ -58,7 +63,6 @@ const LogInForm = () => {
       }
     }
   };
-
   return (
     <form className="auth-form" onSubmit={handleSubmit}>
       <div>

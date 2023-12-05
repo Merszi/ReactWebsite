@@ -23,17 +23,11 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      // Make a POST request to your API endpoint
-      const response = await axios.post('http://localhost:5000/api/contact', formData);
-
-      // Handle success
-      setSuccessMessage(response.data.message);
-      setErrorMessage('');
+      const response = await axios.post('http://localhost:5000/contact', formData);
+      console.log('Server response:', response.data);
     } catch (error) {
       // Handle error
-      console.error('Error:', error.response?.data || error.message);
-      setSuccessMessage('');
-      setErrorMessage('Failed to submit the form. Please try again.');
+      console.error('Error submitting form:', error);
     }
   };
 
